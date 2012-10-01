@@ -1,1 +1,146 @@
-@import "compass/reset";
+@import "normalize";
+@import "compass/css3";
+@import "mixins";
+
+/* Setup
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+
+body {
+	color: #333;
+	font-size: 14px;
+	line-height: 1.4em;
+	}
+
+.wrapper {
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
+	}
+
+a {
+	@include hover_focus_underline;
+	color: #E53B37;
+	}
+
+/* Masthead
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+
+#masthead {
+	padding: 40px 0;
+	background: #eee;
+	a {
+		color: #111;
+		} // a
+	h1 {
+		margin: 0;
+		} // h1
+	hgroup {
+		margin-bottom: 2em;
+		} // hgroup
+	#primary_nav {
+		font-size: 12px;
+		ul {
+			padding: 0;
+			li {
+				list-style: none;
+				display: inline;
+				margin-right: 1em;
+				a {
+					@include border-radius(5px);
+					@include transition-property(background);
+					@include transition-property(color);
+					@include transition-duration(.15s);
+					background: #ccc;
+					color: #333;
+					padding: .5em 1em;
+					&:hover,
+					&:focus {
+						text-decoration: none;
+						background: #666;
+						color: #eee;
+						} // hover, focus
+					} // a
+				} // li
+			}
+		} // #primary_nav
+	} // #masthead
+
+/* Main section
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+
+#main {
+	overflow: hidden;
+	#main_content {
+		width: 70%;
+		float: left;
+		} // #main_content
+	#sidebar {
+		width: 25%;
+		float: right;
+		}
+	@media (max-width: 680px) {
+		#main_content,
+		#sidebar {
+			width: 100%;
+			float: none;
+			} // main_content, sidebar
+		#sidebar {
+			border-top: 1px solid #ccc;
+			}
+		} // media
+	} // #main
+
+
+/* Secondary nav
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+
+#secondary_nav {
+	ul {
+		padding: 0;
+		li {
+			list-style: none;
+			padding-bottom: .5em;
+			margin-bottom: .5em;
+			border-bottom: 1px solid #ccc;
+			} // li
+		}  // ul
+	@media (max-width: 680px) { 
+		padding-top: 20px;
+		h4, ul, li {
+			margin: 0;
+			}
+		h4 {
+			margin-bottom: .5em;
+			}
+		ul li {
+			font-size: 13px;
+			display: inline;
+			border-bottom: none;
+			margin-right: 1em;
+			}
+		} // media
+	} // #secondary_nav
+
+
+/* Widgets
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+
+.widget {
+	font-size: 13px;
+	line-height: 1.4em;
+	border-bottom: 1px solid #ccc;
+	@media (max-width: 680px) {
+		border-bottom: 0;
+		} // media
+	} // widget
+
+
+/* Footer
+/* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
+
+#site_footer {
+	font-size: 12px;
+	background: #eee;
+	color: #333;
+	padding: 60px 0;
+	}
