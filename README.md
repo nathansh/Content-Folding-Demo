@@ -18,7 +18,7 @@ Cache the element you want to move around:
 
 	var secondaryNav = $('#sidebar .secondary_nav');
 
-Write a fold and unfold functions. jQuery's .append() and .prepend() methods going to do most of the work here.
+Write fold and unfold functions. jQuery's .append() and .prepend() methods going to do most of the work here.
 
 Fold function:
 
