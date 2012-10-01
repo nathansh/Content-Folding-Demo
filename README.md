@@ -1,5 +1,7 @@
 # Content folding with harvey.js and jQuery Demo
 
+Harvey is (available on GitHub)[https://github.com/harvesthq/harvey].
+
 ## Harvey's syntax
 
 	Harvey.attach('screen and (min-width:600px) and (max-width:900px)', {
