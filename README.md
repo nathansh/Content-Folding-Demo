@@ -1,6 +1,6 @@
 # Content folding with harvey.js and jQuery Demo
 
-Harvey is (available on GitHub)[https://github.com/harvesthq/harvey].
+Harvey is available on GitHub at https://github.com/harvesthq/harvey.
 
 ## Harvey's syntax
 
