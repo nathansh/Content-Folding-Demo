@@ -5,9 +5,9 @@ Harvey is available on GitHub at https://github.com/harvesthq/harvey.
 ## Harvey's syntax
 
 	Harvey.attach('screen and (min-width:600px) and (max-width:900px)', {
-	  setup: setup_function,
-	  on: on_function,
-	  off: off_function
+		setup: setup_function,
+		on: on_function,
+		off: off_function
 	});
 
 ## Moving DOM elements with jQuery
