@@ -1,4 +1,4 @@
-# Content folding with harvey.js and jQuery
+# Content folding with harvey.js and jQuery Demo
 
 ## Harvey's syntax
 
@@ -35,10 +35,10 @@ Functions for a breakpoint as a whole
 		...
 	}
 
-With Harvey
+## With Harvey
 
 	Harvey.attach('screen and (min-width:600px) and (max-width:900px)', {
-	  setup: setupMidsizeBreakpoint,
-	  on: foldMidsizeBreakpoint,
-	  off: unfoldMidsizeBreakpoint
+		setup: setupMidsizeBreakpoint,
+		on: foldMidsizeBreakpoint,
+		off: unfoldMidsizeBreakpoint
 	});

@@ -482,19 +482,24 @@ a:hover, a:focus {
   width: 70%;
   float: left;
 }
-/* line 77, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
+#main #main_content h1 {
+  line-height: 1.45em;
+  margin-bottom: 0;
+}
+/* line 81, ../sass/screen.scss */
 #main #sidebar {
   width: 25%;
   float: right;
 }
 @media (max-width: 680px) {
-  /* line 83, ../sass/screen.scss */
+  /* line 87, ../sass/screen.scss */
   #main #main_content,
   #main #sidebar {
     width: 100%;
     float: none;
   }
-  /* line 87, ../sass/screen.scss */
+  /* line 91, ../sass/screen.scss */
   #main #sidebar {
     border-top: 1px solid #ccc;
   }
@@ -502,11 +507,11 @@ a:hover, a:focus {
 
 /* Secondary nav
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
-/* line 98, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 #secondary_nav ul {
   padding: 0;
 }
-/* line 100, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 #secondary_nav ul li {
   list-style: none;
   padding-bottom: .5em;
@@ -514,19 +519,19 @@ a:hover, a:focus {
   border-bottom: 1px solid #ccc;
 }
 @media (max-width: 680px) {
-  /* line 97, ../sass/screen.scss */
+  /* line 101, ../sass/screen.scss */
   #secondary_nav {
     padding-top: 20px;
   }
-  /* line 109, ../sass/screen.scss */
+  /* line 113, ../sass/screen.scss */
   #secondary_nav h4, #secondary_nav ul, #secondary_nav li {
     margin: 0;
   }
-  /* line 112, ../sass/screen.scss */
+  /* line 116, ../sass/screen.scss */
   #secondary_nav h4 {
     margin-bottom: .5em;
   }
-  /* line 115, ../sass/screen.scss */
+  /* line 119, ../sass/screen.scss */
   #secondary_nav ul li {
     font-size: 13px;
     display: inline;
@@ -537,14 +542,14 @@ a:hover, a:focus {
 
 /* Widgets
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
-/* line 128, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .widget {
   font-size: 13px;
   line-height: 1.4em;
   border-bottom: 1px solid #ccc;
 }
 @media (max-width: 680px) {
-  /* line 128, ../sass/screen.scss */
+  /* line 132, ../sass/screen.scss */
   .widget {
     border-bottom: 0;
   }
@@ -552,7 +557,7 @@ a:hover, a:focus {
 
 /* Footer
 /* + + + + + + + + + + + + + + + + + + + + + + + + + + + */
-/* line 141, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 #site_footer {
   font-size: 12px;
   background: #eee;
