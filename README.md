@@ -1,28 +1,44 @@
-# BoilerPenguin
-A set of html/css/js templates to get coding going faster. This boilerplate can help get projects get going faster, or setup sandbox files quicker to test new techniques. Rather then creating a framework that could be used by everybody, this is the boilerplate that I use in my own work. As such there are a few things that reflect my personal preferance, such as the use of LESS.
+# Content folding with harvey.js and jQuery
 
-### Markup
+## Harvey's syntax
 
-The markup is clean, semantic html5.
+	Harvey.attach('screen and (min-width:600px) and (max-width:900px)', {
+	  setup: setup_function,
+	  on: on_function,
+	  off: off_function
+	});
 
-### LESS
+## Moving DOM elements with jQuery
 
-The LESS superset of CSS brings a lot of functionality to CSS that developers have been wanting: variables, functions, nested selectors... as a whole LESS enables faster css development, leaner CSS files, and a more enjoyable development process in general. As such, BoilerPenguin is centered around LESS. A lot of people use Sass, which is also fantastic. The features are so similar that it's a matter of preference, and I've included LESS files as that's what I use in my own workflow.
+Cache the element you want to move around:
 
-You only need to compile style.less and ie.less
+	var secondaryNav = $('#sidebar .secondary_nav');
 
-### library.less
+Write a fold and unfold functions. jQuery's .append() and .prepend() methods going to do most of the work here.
 
-This file imports your variables, css3 library, and any other libraries you wish to include. It also contains your mixins.
+Fold function:
 
-### css3.less
+	function foldSecondaryNavIntoHeader() {
+		$("#masthead").append(secondaryNav);
+	}
 
-I've included a few css3 mixins to make using css3 faster. Rather than including the full breadth of css3 I've just included items that I've found myself using on every project.
+Unfold function:
 
-### responsive.less
+	function unfoldSecondaryNavIntoSidebar() {
+		$("#sidebar").prepend(secondaryNav);
+	}
 
-A few media queries are found in responsive.less which is included in the bottom of style.less These specific sizes are just a starting point. 
+Functions for a breakpoint as a whole
 
-### Normalize vs. Eric Meyer
+	function foldMidsizeBreakpoint() {
+		foldSecondaryNavIntoHeader();
+		...
+	}
 
-Eric Meyer's global css reset has been the long standard in the css reset world. Normalize is quickly gaining traction though, so I've included both as there are great things about both approaches. I haven't yet settled on switching to Normalize from Eric Meyer's reset yet, and I imagine others might want to try out both as well.
+With Harvey
+
+	Harvey.attach('screen and (min-width:600px) and (max-width:900px)', {
+	  setup: setupMidsizeBreakpoint,
+	  on: foldMidsizeBreakpoint,
+	  off: unfoldMidsizeBreakpoint
+	});
