@@ -1,14 +1,6 @@
-# Content folding with harvey.js and jQuery Demo
+# Content folding with enquire.js and jQuery Demo
 
-Harvey is available on GitHub at https://github.com/harvesthq/harvey.
-
-## Harvey's syntax
-
-	Harvey.attach('screen and (min-width:600px) and (max-width:900px)', {
-		setup: setup_function,
-		on: on_function,
-		off: off_function
-	});
+Enquire download and syntax documentation is available at [the enquire.js website](http://wicky.nillia.ms/enquire.js/).
 
 ## Moving DOM elements with jQuery
 
@@ -30,17 +22,14 @@ Unfold function:
 		$("#sidebar").prepend(secondaryNav);
 	}
 
-Functions for a breakpoint as a whole
 
-	function foldMidsizeBreakpoint() {
-		foldSecondaryNavIntoHeader();
-		...
-	}
+## With Enquire
 
-## With Harvey
-
-	Harvey.attach('screen and (min-width:600px) and (max-width:900px)', {
-		setup: setupMidsizeBreakpoint,
-		on: foldMidsizeBreakpoint,
-		off: unfoldMidsizeBreakpoint
-	});
+    enquire.register("screen and (max-width: 680px)", {
+    	match: function() {
+    		foldSecondaryNavIntoHeader();
+    	},
+    	unmatch: function() {
+    		unfoldSecondaryNavIntoHeader();
+    	}
+    });
